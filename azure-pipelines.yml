@@ -1,4 +1,9 @@
 # Node.js
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    downloadPath: '$(System.ArtifactsDirectory)'
 - task: Npm@1
   inputs:
     command: 'install'
